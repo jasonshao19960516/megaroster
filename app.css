@@ -1,0 +1,49 @@
+.template {
+  visibility: hidden;
+}
+
+.student {
+  border: 1px solid #ddd;
+  padding: 0.75rem 1.25rem;
+  height: 4rem;
+}
+
+.student + .student {
+  border-top: none;
+}
+
+.student-name {
+  float: left;
+  line-height: 38px;
+  overflow-x: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: calc(100% - 195px)
+}
+
+.actions {
+  float: right;
+  margin-bottom: 0;
+}
+
+.promoted {
+  background-color: #FFB807;
+  border-color: #FFC656;
+}
+
+.student:first-child button.move-up,
+.student:last-child button.move-down {
+  background-color: #ddd;
+  color: #eee;
+  cursor: not-allowed;
+}
+
+[contenteditable]:hover {
+  outline-color: -webkit-focus-ring-color;
+  outline-style: auto;
+  outline-width: 2px;
+}
+
+[contenteditable]:focus {
+  outline-width: 5px;
+}
